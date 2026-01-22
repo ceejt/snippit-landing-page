@@ -31,6 +31,12 @@ const Navbar = () => {
         </motion.div>
         <div className="hidden md:flex items-center gap-8">
           <a
+            href="#hero"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            About
+          </a>
+          <a
             href="#features"
             className="text-gray-600 hover:text-black transition-colors"
           >
@@ -47,6 +53,12 @@ const Navbar = () => {
             className="text-gray-600 hover:text-black transition-colors"
           >
             Testimonials
+          </a>
+          <a
+            href="#footer"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            Contact
           </a>
           <motion.a
             href="#cta"
