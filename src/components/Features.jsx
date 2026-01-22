@@ -68,5 +68,27 @@ const Features = () => {
       },
     },
   };
+    return (
+        <section id="features" className="py-32 bg-white relative">
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <motion.div
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-5xl font-extrabold mb-6">
+            Turn long-form into<br />
+            <span className="text-gradient">digestible content</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Made for sharing. Built for creators who value their time.
+          </p>
+        </motion.div>
+            </div>
+        </section>
+        
+    );
 };
 export default Features;
