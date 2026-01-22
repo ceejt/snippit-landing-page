@@ -41,7 +41,14 @@ const Demo = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-          ></motion.div>
+          >
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="w-full h-96 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                <span className="text-6xl opacity-30">🎬</span>
+              </div>
+            </div>
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-pink-300 rounded-2xl blur-2xl opacity-50" />
+          </motion.div>
         </div>
       </div>
     </section>
