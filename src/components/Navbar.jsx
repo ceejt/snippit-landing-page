@@ -29,6 +29,34 @@ const Navbar = () => {
         >
           Snippit
         </motion.div>
+        <div className="hidden md:flex items-center gap-8">
+          <a
+            href="#features"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            Features
+          </a>
+          <a
+            href="#demo"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            Demo
+          </a>
+          <a
+            href="#testimonials"
+            className="text-gray-600 hover:text-black transition-colors"
+          >
+            Testimonials
+          </a>
+          <motion.a
+            href="#cta"
+            className="btn-glossy btn-glossy-primary px-6 py-2 text-sm"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get Started
+          </motion.a>
+        </div>
       </div>
     </motion.nav>
   );
