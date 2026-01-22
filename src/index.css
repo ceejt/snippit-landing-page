@@ -17,3 +17,19 @@
     @apply font-body overflow-x-hidden;
   }
 }
+
+@layer components {
+  .btn-glossy {
+    @apply relative inline-block font-semibold rounded-xl transition-all duration-300 cursor-pointer overflow-hidden shadow-lg;
+  }
+
+  .btn-glossy::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-1/2 rounded-t-xl;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
