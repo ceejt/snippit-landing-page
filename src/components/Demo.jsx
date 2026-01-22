@@ -86,7 +86,7 @@ const Demo = () => {
           </motion.div>
           <motion.a
             href="#cta"
-            className="btn-glossy btn-glossy-primary px-8 py-4 inline-block text-center"
+            className="btn-glossy btn-glossy-primary px-4 py-3 inline-block text-center"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
