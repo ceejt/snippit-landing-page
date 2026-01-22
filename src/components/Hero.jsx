@@ -41,14 +41,13 @@ const Hero = () => {
 
     return () => observer.disconnect();
   }, []);
-};
 
-return (
+  return (
     <section className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-pink-50 via-white to-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute w-96 h-96 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full blur-3xl opacity-30"
-          style={{ top: '10%', left: '5%' }}
+          style={{ top: "10%", left: "5%" }}
           animate={{
             y: [0, -30, -60, -30, 0],
             x: [0, 30, -30, -60, 0],
@@ -57,12 +56,12 @@ return (
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
         />
         <motion.div
           className="absolute w-80 h-80 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full blur-3xl opacity-30"
-          style={{ bottom: '20%', right: '10%' }}
+          style={{ bottom: "20%", right: "10%" }}
           animate={{
             y: [0, -30, -60, -30, 0],
             x: [0, 30, -30, -60, 0],
@@ -71,13 +70,13 @@ return (
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             delay: 5,
           }}
         />
         <motion.div
           className="absolute w-72 h-72 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full blur-3xl opacity-30"
-          style={{ top: '50%', right: '5%' }}
+          style={{ top: "50%", right: "5%" }}
           animate={{
             y: [0, -30, -60, -30, 0],
             x: [0, 30, -30, -60, 0],
@@ -86,7 +85,7 @@ return (
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'easeInOut',
+            ease: "easeInOut",
             delay: 10,
           }}
         />
@@ -105,7 +104,7 @@ return (
             transition={{ delay: 0.2 }}
           >
             <span className="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-semibold tracking-wide inline-block">
-            Smart Video Editing
+              Smart Video Editing
             </span>
           </motion.div>
 
@@ -115,7 +114,8 @@ return (
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
-            Clip it.<br />
+            Clip it.
+            <br />
             <span className="text-gradient">Snippit!</span>
           </motion.h1>
 
@@ -125,8 +125,12 @@ return (
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            Turn long-form content into <span className="font-semibold text-black">platform-perfect clips</span>{' '}
-            with smart ratios and instant sharing. No awkward cuts, no wasted time.
+            Turn long-form content into{" "}
+            <span className="font-semibold text-black">
+              platform-perfect clips
+            </span>{" "}
+            with smart ratios and instant sharing. No awkward cuts, no wasted
+            time.
           </motion.p>
 
           <motion.div
@@ -135,10 +139,16 @@ return (
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <a href="#cta" className="btn-glossy btn-glossy-primary px-8 py-4 text-lg">
+            <a
+              href="#cta"
+              className="btn-glossy btn-glossy-primary px-8 py-4 text-lg"
+            >
               Start Cutting Now
             </a>
-            <a href="#demo" className="btn-glossy btn-glossy-secondary px-8 py-4 text-lg">
+            <a
+              href="#demo"
+              className="btn-glossy btn-glossy-secondary px-8 py-4 text-lg"
+            >
               Watch Demo
             </a>
           </motion.div>
@@ -150,23 +160,52 @@ return (
             transition={{ delay: 0.6 }}
           >
             <div className="transition-transform hover:scale-105">
-              <div className="text-3xl font-bold text-gradient">{counts.clips}k+</div>
+              <div className="text-3xl font-bold text-gradient">
+                {counts.clips}k+
+              </div>
               <div className="text-sm text-gray-600">Clips Created</div>
             </div>
             <div className="transition-transform hover:scale-105">
-              <div className="text-3xl font-bold text-gradient">{counts.time} sec</div>
+              <div className="text-3xl font-bold text-gradient">
+                {counts.time} sec
+              </div>
               <div className="text-sm text-gray-600">Avg. Edit Time</div>
             </div>
             <div className="transition-transform hover:scale-105">
-              <div className="text-3xl font-bold text-gradient">{counts.satisfaction}%</div>
+              <div className="text-3xl font-bold text-gradient">
+                {counts.satisfaction}%
+              </div>
               <div className="text-sm text-gray-600">Satisfaction</div>
             </div>
           </motion.div>
         </motion.div>
-        
-        </div>
-        </section>
-    );
+
+        <motion.div
+          className="relative"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl glass-effect">
+            <div className="w-full h-96 bg-gradient-to-br from-pink-200 to-blue-200 flex items-center justify-center">
+              <span className="text-6xl opacity-50">📹</span>
+            </div>
+          </div>
+
+          <motion.div
+            className="absolute -top-6 -right-6 w-32 h-32 bg-pink-200 rounded-full blur-3xl opacity-60"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 3, repeat: Infinity }}
+          />
+          <motion.div
+            className="absolute -bottom-6 -left-6 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-60"
+            animate={{ scale: [1, 1.2, 1] }}
+            transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
