@@ -49,8 +49,44 @@ const Demo = () => {
             </div>
             <div className="absolute -top-4 -left-4 w-24 h-24 bg-pink-300 rounded-2xl blur-2xl opacity-50" />
           </motion.div>
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-5xl font-extrabold leading-tight">
+              Your Edge Over
+              <br />
+              <span className="text-gradient">Other Clip Cutters</span>
+            </h2>
+            <div className="space-y-6">
+              {advantages.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="flex gap-4"
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div
+                    className={`flex-shrink-0 w-12 h-12 rounded-full ${item.bg} flex items-center justify-center`}
+                  >
+                    <span className="text-xl">{item.icon}</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 };
+export default Demo;
