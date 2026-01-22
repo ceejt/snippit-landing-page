@@ -21,7 +21,16 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-    ></motion.nav>
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
+        <motion.div
+          className="text-3xl font-bold tracking-tight font-display"
+          whileHover={{ scale: 1.05 }}
+        >
+          Snippit
+        </motion.div>
+      </div>
+    </motion.nav>
   );
 };
 
