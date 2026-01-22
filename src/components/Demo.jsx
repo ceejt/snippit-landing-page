@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { RatioIcon } from "./assets/demo-split.svg";
-import { SocialIcon } from "./assets/demo-social.svg";
-import { ZeroIcon } from "./assets/demo-zero.svg";
+import RatioIcon from "./assets/demo-split.svg";
+import SocialIcon from "./assets/demo-social.svg";
+import ZeroIcon from "./assets/demo-zero.svg";
 
 const Demo = () => {
   const advantages = [
@@ -84,6 +84,14 @@ const Demo = () => {
               ))}
             </div>
           </motion.div>
+          <motion.a
+            href="#cta"
+            className="btn-glossy btn-glossy-primary px-8 py-4 inline-block text-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Try It Free
+          </motion.a>
         </div>
       </div>
     </section>

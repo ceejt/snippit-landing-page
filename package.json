@@ -5,6 +5,7 @@
   "description": "Snippit: Clip Cutter",
   "dependencies": {
     "framer-motion": "^10.18.0",
+    "npm": "^11.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
