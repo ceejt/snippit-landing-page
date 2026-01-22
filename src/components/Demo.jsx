@@ -27,4 +27,23 @@ const Demo = () => {
         "Intuitive interface designed for beginners. Start cutting professionally from minute one.",
     },
   ];
+
+  return (
+    <section
+      id="demo"
+      className="py-32 bg-gradient-to-br from-gray-50 to-pink-50 relative overflow-hidden"
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          ></motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
