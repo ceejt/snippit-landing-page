@@ -44,6 +44,10 @@ const Testimonials = () => {
                   </span>
                 ))}
               </div>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                "{testimonial.text}"
+              </p>
+              <div className="flex items-center gap-4"></div>
             </motion.div>
           ))}
         </div>
