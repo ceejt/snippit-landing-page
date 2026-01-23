@@ -54,6 +54,14 @@ const CTA = () => {
             <br />
             <span className="text-gradient">Smart Ratios</span>
           </h2>
+          <div className="space-y-4 mb-12">
+            <p className="text-2xl font-semibold text-gray-800">
+              For creators who want less trimming and more publishing.
+            </p>
+            <p className="text-xl text-gray-600">
+              Spend less time cutting and more time creating.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
