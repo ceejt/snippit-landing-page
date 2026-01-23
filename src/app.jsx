@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Demo from "./components/Demo";
 import Testimonials from "./components/Testimonials";
+import CTA from "./components/CTA";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Features />
       <Demo />
       <Testimonials />
+      <CTA />
     </div>
   );
 }
