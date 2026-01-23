@@ -72,6 +72,27 @@ const CTA = () => {
               Get Started Free
             </motion.a>
           </div>
+          <motion.div
+            className="flex flex-wrap gap-3 justify-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            {features.map((feature, index) => (
+              <motion.span
+                key={index}
+                className="px-4 py-2 bg-white/80 backdrop-blur rounded-full text-sm font-medium shadow-sm"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.125 + index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                {feature}
+              </motion.span>
+            ))}
+          </motion.div>
         </motion.div>
       </div>
     </section>
