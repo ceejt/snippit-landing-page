@@ -62,6 +62,16 @@ const CTA = () => {
               Spend less time cutting and more time creating.
             </p>
           </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <motion.a
+              href="#"
+              className="btn-glossy btn-glossy-primary px-12 py-5 text-xl"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started Free
+            </motion.a>
+          </div>
         </motion.div>
       </div>
     </section>
