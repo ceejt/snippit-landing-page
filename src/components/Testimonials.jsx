@@ -47,7 +47,19 @@ const Testimonials = () => {
               <p className="text-gray-700 leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
-              <div className="flex items-center gap-4"></div>
+              <div className="flex items-center gap-4">
+                <div
+                  className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center font-bold text-white`}
+                >
+                  {testimonial.initials}
+                </div>
+                <div>
+                  <div className="font-bold">{testimonial.name}</div>
+                  <div className="text-sm text-gray-500">
+                    {testimonial.role}
+                  </div>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
