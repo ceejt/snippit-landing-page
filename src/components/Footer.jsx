@@ -133,7 +133,7 @@ const Footer = () => {
           <p className="text-gray-500 text-sm text-center">
             Designed & developed by{" "}
             <a
-              href="#"
+              href="www.linkedin.com/in/cj-tinae"
               className="text-pink-400 font-semibold hover:text-pink-300 transition-colors"
             >
               Ceejt
