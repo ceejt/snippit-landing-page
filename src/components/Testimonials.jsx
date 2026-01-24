@@ -22,7 +22,7 @@ const Testimonials = () => {
       rating: 5,
       text: "Finally, a tool that actually understands short-form content. Direct sharing to platforms saves me so much time every day.",
       name: "Christine Paman",
-      role: "Lifestyle Channel • 890k followers",
+      role: "Productivity Channel • 890k followers",
       initials: "CJ",
       gradient: "from-yellow-300 to-orange-300",
     },
