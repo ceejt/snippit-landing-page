@@ -10,16 +10,18 @@ const Footer = () => {
     { name: "Demo", href: "#demo" },
     { name: "Updates", href: "#updates" },
   ];
+
   const resourceLinks = [
     { name: "Documentation", href: "#" },
     { name: "Tutorials", href: "#" },
     { name: "Support", href: "#" },
     { name: "Blog", href: "#" },
   ];
+
   const contactLinks = [
     {
-      name: "hello@snippit.app",
-      href: "mailto:hello@snippit.app",
+      name: "snippit@gmail.com",
+      href: "mailto:snippit@gmail.com",
       icon: <img src={GmailIcon} alt="Gmail" />,
     },
     {
@@ -35,9 +37,10 @@ const Footer = () => {
     {
       name: "LinkedIn",
       href: "#",
-      icon: <img src={LinkedinIcon} alt="Linkedin" />,
+      icon: <img src={LinkedinIcon} alt="Linkedin" className="w-5 h-5" />,
     },
   ];
+
   return (
     <footer className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -51,7 +54,11 @@ const Footer = () => {
             <p className="text-gray-400">
               The clip cutter for your content needs.
             </p>
+            <p className="text-gray-400 text-sm mt-2">
+              © 2026 Snippit. All rights reserved.
+            </p>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,6 +79,7 @@ const Footer = () => {
               ))}
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -92,6 +100,7 @@ const Footer = () => {
               ))}
             </ul>
           </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -113,6 +122,24 @@ const Footer = () => {
             </ul>
           </motion.div>
         </div>
+
+        <motion.div
+          className="border-t border-gray-800 pt-8 flex flex-col justify-center items-center gap-4"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <p className="text-gray-500 text-sm text-center">
+            Designed & developed by{" "}
+            <a
+              href="#"
+              className="text-pink-400 font-semibold hover:text-pink-300 transition-colors"
+            >
+              Ceejt
+            </a>
+          </p>
+        </motion.div>
       </div>
     </footer>
   );
