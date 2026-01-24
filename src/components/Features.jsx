@@ -9,6 +9,7 @@ const Features = () => {
   const [inView, setInView] = useState(false);
 
   useEffect(() => {
+    const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
