@@ -51,6 +51,26 @@ const Footer = () => {
               The clip cutter for your content needs.
             </p>
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+          >
+            <h4 className="font-bold mb-4">Product</h4>
+            <ul className="space-y-2 text-gray-400">
+              {productLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </div>
     </footer>
