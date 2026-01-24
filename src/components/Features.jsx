@@ -5,8 +5,6 @@ import SmartIcon from "./assets/features-ratio.svg";
 import ShareIcon from "./assets/features-share.svg";
 
 const Features = () => {
-  const ref = useRef(null);
-
   const features = [
     {
       icon: <img src={CutIcon} alt="Fast" />,
@@ -67,7 +65,6 @@ const Features = () => {
           </p>
         </motion.div>
         <motion.div
-          ref={ref}
           className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
