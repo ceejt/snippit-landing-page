@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import GmailIcon from "./assets/footer-gmail.svg";
 import FBIcon from "./assets/footer-fb.svg";
 import IGIcon from "./assets/footer-ig.svg";
 import LinkedinIcon from "./assets/footer-linkedin.svg";
@@ -19,7 +20,7 @@ const Footer = () => {
     {
       name: "hello@snippit.app",
       href: "mailto:hello@snippit.app",
-      icon: "📧",
+      icon: <img src={GmailIcon} alt="Gmail" />,
     },
     {
       name: "Facebook",
@@ -86,6 +87,26 @@ const Footer = () => {
                     className="hover:text-white transition-colors"
                   >
                     {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
+            <h4 className="font-bold mb-4">Get in Touch</h4>
+            <ul className="space-y-3">
+              {contactLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors flex items-center gap-2"
+                  >
+                    <span>{link.icon}</span> {link.name}
                   </a>
                 </li>
               ))}
