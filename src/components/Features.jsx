@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import CutIcon from "./assets/features-cut.svg";
 import SmartIcon from "./assets/features-ratio.svg";
 import ShareIcon from "./assets/features-share.svg";
