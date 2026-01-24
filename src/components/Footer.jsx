@@ -42,7 +42,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer id="footer" className="bg-gray-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <motion.div

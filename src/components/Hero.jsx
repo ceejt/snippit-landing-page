@@ -43,7 +43,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-pink-50 via-white to-blue-50 relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center pt-20 bg-gradient-to-br from-pink-50 via-white to-blue-50 relative overflow-hidden"
+    >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute w-96 h-96 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full blur-3xl opacity-30"
