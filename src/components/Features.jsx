@@ -8,27 +8,6 @@ const Features = () => {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const currentRef = ref.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-        }
-      },
-      { threshold: 0.1 },
-    );
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
   const features = [
     {
       icon: <img src={CutIcon} alt="Fast" />,
@@ -93,7 +72,7 @@ const Features = () => {
           className="grid md:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          viewport={{ once: true, amount: 0.2 }}
         >
           {features.map((feature, index) => (
             <motion.div
