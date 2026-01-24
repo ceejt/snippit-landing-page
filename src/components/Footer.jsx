@@ -37,6 +37,24 @@ const Footer = () => {
       icon: <img src={LinkedinIcon} alt="Linkedin" />,
     },
   ];
+  return (
+    <footer className="bg-gray-900 text-white py-16">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-3xl font-bold mb-4">Snippit</div>
+            <p className="text-gray-400">
+              The clip cutter for your content needs.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 
 export default Footer;
